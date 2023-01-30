@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/cadastro-colaborador.css">
+    <link rel="icon" href="./assets/img/logo/GoodPay.png">
+    <title>Cadastro de colaborador</title>
+</head>
+
+<body class="p-3 m-0 border-0 bd-example">
+    <header>
+        <section id="navbar">
+            <link rel="stylesheet" href="/navbar.html">
+        </section>
+    </header>
+    <main>
+        <section class="container">
+            <div class="text-container">
+            <h2>Cadastro Colaborador</h2>
+            <h5 class="mb-4">Insira as informações abaixo:</h5>
+            <form class="row g-3 needs-validation was-validated" novalidate>
+                <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" id="nome" minlength="5" required>
+                    <div class="valid-feedback">Nome ok!</div>
+                    <div class="invalid-feedback">Preencha o nome corretamente.</div>
+                </div>
+            </div>
+
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback">Insira um email válido.</div>
+                        <div class="valid-feedback">Email ok!</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="tel" class="form-label">Telefone</label>
+                    <input type="text" class="form-control" id="tel" minlength="11" required
+                        placeholder="(00) 00000-0000">
+                    <div class="valid-feedback">
+                        Telefone ok!
+                    </div>
+                    <div class="invalid-feedback">Insira um telefone válido.</div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="espec" class="form-label">Especialidade</label>
+                    <select class="form-select" id="espec" required>
+                        <option selected disabled value="">Selecione Uma Especialidade</option>
+                        <option value="1">Desenvolvedor Front-End</option>
+                        <option value="2">Desenvolvedor Back-End</option>
+                        <option value="3">Desenvolvedor Mobile</option>
+                        <option value="4">UX Designer</option>
+                        <option value="5">Outras</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Selecione uma Opção
+                    </div>
+                    <div class="valid-feedback">
+                        Especialidade ok!
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="comentario" class="form-label">Comentário</label>
+                    <textarea type="text" class="form-control" id="comentario" required minlength="30"
+                        placeholder="Comentário pessoal sobre o porquê de estar se tornando colaborador"></textarea>
+                    <div class="invalid-feedback">Mínimo 30 Caracteres</div>
+                </div>
+
+
+                <div class="col-12 mb-5">
+                    <button id="botaoEnviar" class="botao-primary" type="button">Enviar</button>
+                </div>
+            </form>
+        </section>
+
+        <div class="modal fade" id="alertaCadastro" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cadastro Efetuado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Solicitação de cadastro enviada com sucesso!</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="erroCaptcha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" id="erroCaptcha">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Erro de Capctha</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Resultado da soma incorreto!</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <section id="footer">
+            <link rel="stylesheet" href="/footer.html">
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/cadastroColaborador.js"></script>
+</body>
+
+</html>
