@@ -5,4 +5,17 @@ section.container {
    margin-top: 100px;
    margin-bottom: 100px;
 }
+button.btn {
+   color: black;
+   background-color: #4bd86e;
+   border-radius: 20px;
+   border: none;
+   width: 150px;
+   display: block;
+   margin: 0 auto;
+   margin-top: 28px;
+   margin-bottom: 28px;
+   line-height: 25px;
+   }
+
 
